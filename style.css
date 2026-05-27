@@ -2,113 +2,152 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #111a13, #070a08); /* Latar belakang gelap nuansa moss green */
+    background: #090c10;
     color: #ffffff;
+    padding-bottom: 100px;
+}
+
+.navbar {
+    background: #121721;
+    padding: 15px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #1f2633;
+}
+
+.nav-container {
+    max-width: 480px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+}
+
+.brand-logo {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.brand-logo span {
+    color: #ffaa00;
+}
+
+.logo-icon { color: #ffaa00; }
+.nav-right { display: flex; gap: 18px; color: #b2bdcd; }
+
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(9,12,16,1)), 
+                url('https://images.unsplash.com/photo-1612287230202-1bf1d85d1bdf?q=80&w=500') no-repeat center/cover;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
     padding: 20px;
 }
 
-.container {
-    width: 100%;
+.banner-overlay {
     max-width: 480px;
-    text-align: center;
+    margin: 0 auto;
+    width: 100%;
 }
 
-header {
-    margin-bottom: 30px;
-}
-
-.brand-name {
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #fff;
-}
-
-.brand-name span {
-    color: #e65c00; /* Aksen orange untuk teks STORE */
-}
-
-.hero h2 {
-    font-style: italic;
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: #f0f0f0;
-}
-
-.hero h1 {
-    font-size: 36px;
-    font-weight: 900;
-    font-style: italic;
-    color: #ff3333; /* Judul merah menyala */
-    margin-bottom: 10px;
-    text-shadow: 0px 0px 10px rgba(255, 51, 51, 0.4);
-}
-
-.subtitle {
-    font-size: 13px;
-    color: #cccccc;
-    line-height: 1.5;
-    margin-bottom: 30px;
-    padding: 0 10px;
-}
-
-.menu-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.btn-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 25px;
-    border-radius: 20px;
-    transition: transform 0.2s ease;
-}
-
-.btn-main:hover {
-    transform: scale(1.02);
-}
-
-.icon-large {
-    font-size: 40px;
-    margin-bottom: 12px;
-}
-
-.btn-text h3 {
-    font-size: 20px;
+.banner-tag {
+    background: #ffaa00;
+    color: #000;
+    font-size: 9px;
     font-weight: 800;
-    font-style: italic;
-    letter-spacing: 0.5px;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
-.btn-text p {
-    font-size: 11px;
-    margin-top: 4px;
-    font-weight: 600;
-    opacity: 0.9;
+.hero-banner h1 { font-size: 22px; font-weight: 900; margin: 2px 0; }
+.banner-date { font-size: 11px; color: #ffaa00; }
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px;
 }
 
-/* Tombol Orange (Mau Beli Akun) */
-.btn-orange {
-    background: #e65c00;
-    color: #fff;
+.section-header { display: flex; justify-content: space-between; align-items: center; }
+.flash-title i { color: #ffaa00; }
+
+.countdown-timer {
+    background: #161d28;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #243043;
 }
 
-/* Tombol Merah (Mau Jual Akun) */
-.btn-dark {
+.section-subtitle { font-size: 11px; color: #9aa5b5; margin-bottom: 16px; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.product-card {
+    position: relative;
+    background: #1c222b;
+    border-radius: 12px;
+    text-decoration: none;
+    overflow: hidden;
+    border: 1px solid #262f3c;
+}
+
+.card-content { padding: 16px 12px; display: flex; flex-direction: column; min-height: 115px; justify-content: space-between; }
+.product-card h3 { font-size: 12px; color: #d0d7e2; }
+.old-price { font-size: 10px; color: #768396; text-decoration: line-through; }
+.new-price { font-size: 14px; font-weight: 700; color: #ffaa00; }
+.status-tag { background: #262f3c; color: #ffaa00; font-size: 9px; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+
+.badge-discount {
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    background: #ffaa00;
+    color: #000;
+    font-weight: 800;
+    font-size: 7.5px;
+    transform: rotate(45deg);
+    padding: 2px 24px;
+}
+
+.menu-container { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+.btn-main { display: flex; align-items: center; gap: 14px; text-decoration: none; padding: 16px; border-radius: 14px; color: #fff; }
+.btn-text h3 { font-size: 14px; font-weight: 800; }
+.btn-text p { font-size: 10px; opacity: 0.8; }
+
+.btn-orange { background: #e65c00; }
+.btn-red { background: #ff3333; }
+
+.group-links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px; }
+.btn-wa { background: #1c222b; color: #fff; text-decoration: none; padding: 12px; border-radius: 10px; font-size: 12px; text-align: center; border: 1px solid #262f3c; }
+
+.fake-popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: 456px;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+
+.fake-popup.show { bottom: 16px; }
+.popup-box { background: #0b0e14; border: 1px solid #1f2633; border-left: 4px solid #ffaa00; padding: 12px; border-radius: 8px; display: flex; gap: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
+.popup-check-icon { color: #00e676; font-size: 16px; }
+.popup-text h4 { font-size: 11px; }
+.popup-text p { font-size: 11px; color: #9aa5b5; }
+.popup-product { display: inline-block; background: #161d28; color: #ffaa00; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-top: 4px; }
     background: #ff3333;
     color: #fff;
 }
